@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('---clean---') {
             steps {
-                sh "mvn clean"
+                sh "/home/osboxes/apache-maven-3.5.2/bin/mvn clean"
             }
         }
         stage('--test--') {
             steps {
-                sh "mvn test"
+                sh "/home/osboxes/apache-maven-3.5.2/bin/mvn test"
             }
         }
         stage('--package--') {
             steps {
-                sh "mvn package"
+                sh "/home/osboxes/apache-maven-3.5.2/bin/mvn package"
             }
         }
     }
